@@ -47,8 +47,8 @@ import jakarta.persistence.Table;
         @ManyToOne
         private User user;
 
-        @JoinColumn(name = "role_id", referencedColumnName = "roleid")
-        @ManyToOne
-        private Role role;
+        // @JoinColumn(name = "role_id", referencedColumnName = "roleid")
+        // @ManyToOne
+        // private Role role;
 
     }

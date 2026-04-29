@@ -23,7 +23,7 @@ public class Shippers {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private int shipperId;
+    private int shipperId;
 
 
     @Column(name = "shipper_name")

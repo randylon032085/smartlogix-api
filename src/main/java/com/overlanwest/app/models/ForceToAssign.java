@@ -42,11 +42,11 @@ public class ForceToAssign {
     @OneToOne
     private Manifest manifest;
 
-    @JoinColumn(name = "user_id", referencedColumnName = "userId")
-    @OneToOne
-    private User fromDriver;
+    // @JoinColumn(name = "from_user_id", referencedColumnName = "userId")
+    // @OneToOne
+    // private User fromDriver;
 
-    @JoinColumn(name = "user_id", referencedColumnName = "userId")
-    @OneToOne
-    private User toDriver;
+    // @JoinColumn(name = "to_user_id", referencedColumnName = "userId")
+    // @OneToOne
+    // private User toDriver;
 }

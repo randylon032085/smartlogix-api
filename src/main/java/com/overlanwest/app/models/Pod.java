@@ -31,17 +31,17 @@ public class Pod {
     @Column(name = "pod_number")
     private String podNumber;
     
-    @Column(name = "create_at")
+    @Column(name = "created_at")
     private Timestamp createAt;
 
-    @Column(name = "update_at")
+    @Column(name = "updated_at")
     private Timestamp updateAt;
 
     @JoinColumn(name = "sales_id", referencedColumnName = "salesId")
     @OneToOne
     private Sales sales;
 
-    @JoinColumn(name = "delivery_status_id", referencedColumnName = "delveryStatusId")
+    @JoinColumn(name = "delivery_status_id", referencedColumnName = "deliveryStatusId")
     @ManyToOne
     private DeliveryStatus deliveryStatus;
 

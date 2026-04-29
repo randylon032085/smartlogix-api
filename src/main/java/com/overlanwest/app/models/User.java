@@ -13,13 +13,15 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @Table(name = "users")
 public class User {
 
@@ -27,9 +29,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
 
-    @JoinColumn(name = "role_id", referencedColumnName = "roleid")
-    @ManyToOne
-    private Role role;
+    // @JoinColumn(name = "role_id", referencedColumnName = "roleid")
+    // @ManyToOne
+    // private Role role;
 
     @Column(name = "first_name")
     private String firstName;
@@ -67,11 +69,11 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Manifest> manifest;
 
-    @OneToOne(mappedBy = "fromDriver")
-    private ForceToAssign forceToAssignFrom;
+    // @OneToOne(mappedBy = "fromDriver")
+    // private ForceToAssign forceToAssignFrom;
 
-    @OneToOne(mappedBy = "toDriver")
-    private ForceToAssign forceToAssignTo;
+    // @OneToOne(mappedBy = "toDriver")
+    // private ForceToAssign forceToAssignTo;
     
 
     

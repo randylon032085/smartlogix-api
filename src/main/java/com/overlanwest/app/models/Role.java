@@ -11,10 +11,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,22 +26,23 @@ public class Role {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "role_id")
     private int roleid;
 
     @Column(name = "role_name")
-    private String roleName;
+    private String rolename;
 
 
-    @Column(name = "created_at")
+    @Column(name = "create_at")
     private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
+    @Column(name = "update_at")
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "role")
-    private List<User> user;
+    // @OneToMany(mappedBy = "role")
+    // private List<User> user;
 
-    @OneToMany(mappedBy = "role")
-    private List<AuditLogs> auditLogs;
+    // @OneToMany(mappedBy = "role")
+    // private List<AuditLogs> auditLogs;
 
 }
