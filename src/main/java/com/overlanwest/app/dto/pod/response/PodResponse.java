@@ -1,4 +1,6 @@
-package com.overlanwest.app.dto.sales.response;
+package com.overlanwest.app.dto.pod.response;
+
+import java.sql.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,10 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SalesResponse {
-
-    private String customerFirstName;
-    private String customerLastName;
+public class PodResponse {
+    
+    private String podNumber;
     private double accesorial;
     private double weight;
     private double rate;
@@ -22,10 +23,15 @@ public class SalesResponse {
     private String cityState;
     private int freightBill;
     private String shipperName;
-    private String username;
-    private int pieces;
-    private double netTotal;
-  
+    private String status;
+    private byte[]  photoProof;
+    private Date deliveryDate;
+    private byte[] signature;
+    private String consinee;
+
+
+
+
     
-    
+
 }

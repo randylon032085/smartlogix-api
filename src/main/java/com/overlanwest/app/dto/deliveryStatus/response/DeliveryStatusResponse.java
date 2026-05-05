@@ -13,7 +13,7 @@ public class DeliveryStatusResponse {
     private byte[]  photoProof;
     private String deliveryDate;
     private byte[] signature;
-    private String consinee;
+    private String consignee;
     
 
     

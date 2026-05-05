@@ -10,7 +10,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -28,8 +27,8 @@ public class Sales {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int salesId;
 
-    @Column(name = "accesorial")
-    private double accesorial;
+    @Column(name = "accessorial")
+    private double accessorial;
 
     @Column(name = "weight")
     private double weight;
@@ -76,5 +75,7 @@ public class Sales {
 
     @OneToOne(mappedBy = "sales")
     private Pod pod;
+
+   
 
 }

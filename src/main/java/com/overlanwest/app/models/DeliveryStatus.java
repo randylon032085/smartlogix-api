@@ -6,6 +6,7 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -38,8 +39,8 @@ public class DeliveryStatus {
     @Column(name = "signature")
     private byte[] signature;
 
-    @Column(name = "consinee")
-    private String consinee;
+    @Column(name = "consignee")
+    private String consignee;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
@@ -47,6 +48,6 @@ public class DeliveryStatus {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "deliveryStatus")
+    @OneToMany(mappedBy = "deliveryStatus", fetch = FetchType.LAZY )
     private List<Pod> pod;
 }

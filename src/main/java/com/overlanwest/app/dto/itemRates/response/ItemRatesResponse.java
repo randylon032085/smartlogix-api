@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemRates {
+public class ItemRatesResponse {
 
     private double lnft;
     private double cuft;

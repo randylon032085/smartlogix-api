@@ -5,6 +5,7 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -26,8 +27,7 @@ public class Role {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "role_id")
-    private int roleid;
+    private int roleId;
 
     @Column(name = "role_name")
     private String rolename;
@@ -39,8 +39,8 @@ public class Role {
     @Column(name = "update_at")
     private LocalDateTime updatedAt;
 
-    // @OneToMany(mappedBy = "role")
-    // private List<User> user;
+    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY )
+    private List<User> user;
 
     // @OneToMany(mappedBy = "role")
     // private List<AuditLogs> auditLogs;

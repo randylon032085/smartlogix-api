@@ -52,7 +52,7 @@ public class Manifest {
     private User user;
 
     @JoinColumn(name = "line_haul_id", referencedColumnName = "lineHaulId")
-    @OneToOne
+    @ManyToOne  
     private LineHaul lineHaul;
 
     @JoinColumn(name = "pod_id", referencedColumnName = "podId")
