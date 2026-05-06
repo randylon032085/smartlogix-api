@@ -1,6 +1,7 @@
 package com.overlanwest.app.models;
 
 import java.security.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -29,10 +30,10 @@ public class TripStatus {
     private String status;
 
     @Column(name = "created_at")
-    private Timestamp createdAt;
+    private LocalDateTime createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "tripStatus")
     private List<LineHaul> lineHauls;

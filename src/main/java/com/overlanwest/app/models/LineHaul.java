@@ -2,6 +2,7 @@ package com.overlanwest.app.models;
 
 
 import java.security.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -47,10 +48,10 @@ public class LineHaul {
     private String power;
 
     @Column(name = "created_at")
-    private Timestamp createdAt;
+    private LocalDateTime createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private LocalDateTime updatedAt;
 
     @JoinColumn(name = "trip_status_id", referencedColumnName = "tripStatusId")
     @ManyToOne
