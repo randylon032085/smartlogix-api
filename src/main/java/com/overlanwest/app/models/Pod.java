@@ -1,6 +1,7 @@
 package com.overlanwest.app.models;
 
 import java.security.Timestamp;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -32,10 +33,10 @@ public class Pod {
     private String podNumber;
     
     @Column(name = "created_at")
-    private Timestamp createAt;
+    private LocalDateTime createAt;
 
     @Column(name = "updated_at")
-    private Timestamp updateAt;
+    private LocalDateTime updateAt;
 
     @JoinColumn(name = "sales_id", referencedColumnName = "salesId")
     @OneToOne
