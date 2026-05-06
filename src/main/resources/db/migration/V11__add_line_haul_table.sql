@@ -4,7 +4,7 @@ CREATE TABLE line_haul (
     user_id BIGINT,
     truck_name VARCHAR(255),
     truck_description VARCHAR(255),
-    turck_length VARCHAR(255),
+    truck_length VARCHAR(255),
     truck_type VARCHAR(255),
     power varchar(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

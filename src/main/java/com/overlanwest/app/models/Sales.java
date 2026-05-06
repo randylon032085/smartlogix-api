@@ -1,7 +1,7 @@
 package com.overlanwest.app.models;
 
 import java.time.LocalDate;
-
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -40,13 +40,13 @@ public class Sales {
     private double tarrif;
 
     @Column(name = "shipment_date")
-    private LocalDate shipmentDate;
+    private LocalDateTime shipmentDate;
 
     @Column(name = "currency")
     private String currency;
 
     @Column(name = "pickup_date")
-    private LocalDate pickupDate;
+    private LocalDateTime pickupDate;
 
     @Column(name = "zip_code")
     private String zipCode;

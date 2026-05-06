@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 public class DeliveryStatusResponse {
 
     private String status;
-    private byte[]  photoProof;
+    // private byte[]  photoProof;
     private String deliveryDate;
-    private byte[] signature;
+    // private byte[] signature;
     private String consignee;
     
 

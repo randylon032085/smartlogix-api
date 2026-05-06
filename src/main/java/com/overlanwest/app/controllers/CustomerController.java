@@ -13,7 +13,7 @@ import com.overlanwest.app.dto.customers.response.CustomerResponse;
 import com.overlanwest.app.services.CustomerService;
 
 @RestController
-@RequestMapping("/api/customer")
+@RequestMapping("/api/v1/customer")
 public class CustomerController {
 
     @Autowired
@@ -24,5 +24,6 @@ public class CustomerController {
     public ResponseEntity<Page<CustomerResponse>> getAllCustomer (Pageable pageable){
 
         return new ResponseEntity<>(customerServ.getAllCustomer(pageable), HttpStatus.FOUND);
+        
     } 
 }

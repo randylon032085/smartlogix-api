@@ -13,7 +13,7 @@ import com.overlanwest.app.dto.users.response.UserResponse;
 import com.overlanwest.app.services.UserService;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/v1/user")
 public class UserController {
 
     @Autowired

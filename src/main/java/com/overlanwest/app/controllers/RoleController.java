@@ -15,7 +15,7 @@ import com.overlanwest.app.dto.role.response.RoleResponse;
 import com.overlanwest.app.services.RoleSerive;
 
 @RestController
-@RequestMapping("/api/role")
+@RequestMapping("/api/v1/role")
 public class RoleController {
     
 

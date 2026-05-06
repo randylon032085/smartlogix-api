@@ -1,5 +1,8 @@
 package com.overlanwest.app.dto.sales.response;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,9 +18,9 @@ public class SalesResponse {
     private double weight;
     private double rate;
     private double tarrif;
-    private String shipmentDate;
+    private LocalDateTime shipmentDate;
     private String currency;
-    private String pickupDate;
+    private LocalDateTime pickupDate;
     private String zipCode;
     private String cityState;
     private int freightBill;
@@ -26,6 +29,4 @@ public class SalesResponse {
     private int pieces;
     private double netTotal;
   
-    
-    
 }
