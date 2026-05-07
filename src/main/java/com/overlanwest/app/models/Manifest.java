@@ -51,10 +51,6 @@ public class Manifest {
     @ManyToOne
     private User user;
 
-    @JoinColumn(name = "line_haul_id", referencedColumnName = "lineHaulId")
-    @ManyToOne  
-    private LineHaul lineHaul;
-
     @JoinColumn(name = "pod_id", referencedColumnName = "podId")
     @ManyToOne
     private Pod pod;

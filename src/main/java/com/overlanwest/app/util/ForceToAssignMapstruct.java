@@ -16,9 +16,7 @@ public interface ForceToAssignMapstruct {
     @Mapping(target = "date", source = "forceToAssign.date")
     @Mapping(target = "startingLocation", source = "forceToAssign.manifest.startingLocation")
     @Mapping(target = "terminalDestination", source = "forceToAssign.manifest.terminalDestination")
-    @Mapping(target = "truckDescription", source = "forceToAssign.manifest.lineHaul.truckDescription")
-    @Mapping(target = "power", source = "forceToAssign.manifest.lineHaul.power")
-    @Mapping(target = "truckType", source = "forceToAssign.manifest.lineHaul.truckType")
+  
     @Mapping(target = "shipperName", source = "forceToAssign.manifest.pod.sales.shippers.shipperName")
     @Mapping(target = "shipperAddress", source = "forceToAssign.manifest.pod.sales.shippers.shipperAddress")
     @Mapping(target = "customerName", source = "forceToAssign.manifest.pod.sales.customer.firstName")

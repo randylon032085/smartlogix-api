@@ -64,8 +64,7 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Sales> sales;
 
-    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY)
-    private LineHaul lineHaul;
+
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Manifest> manifest;
@@ -75,6 +74,9 @@ public class User {
 
     @OneToOne(mappedBy = "toDriver")
     private ForceToAssign forceToAssignTo;
+
+    @OneToMany(mappedBy = "driver", fetch = FetchType.LAZY)
+    private List<FleetAssignment> fleetAssignments;
     
 
     

@@ -9,12 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LineHaulResponse {
     
-    private String driverName;
-    private String driverLastname;
-    private String tripStatus;
+  
+   
     private String truckName;
     private String truckDescription;
-    private String truckLength;
+
     private String truckType;
     private String power;
 }

@@ -21,10 +21,7 @@ public class ManifestResponse {
     private String startingLocation;
     private String terminalDestination;
 
-    //line haul details
-    private String truckDescription;
-    private String power;
-    private String truckType;
+  
     
 
     // Shipper details

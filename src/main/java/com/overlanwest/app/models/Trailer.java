@@ -1,7 +1,5 @@
 package com.overlanwest.app.models;
 
-import java.security.Timestamp;
-import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -14,29 +12,34 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
 @Entity
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "trip_status")
-public class TripStatus {
+@Table(name = "trailer")
+public class Trailer {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int tripStatusId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int trailerId;
 
-    @Column(name = "status")
-    private String status;
+    @Column(name = "length")
+    private String length;
+
+    @Column(name = "trailer_desc")
+    private String trailerDesc;
 
     @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    private String createdAt;   
 
     @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    private String updatedAt;
 
-    @OneToMany(mappedBy = "tripStatus", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "trailer", fetch = FetchType.LAZY)
     private List<FleetAssignment> fleetAssignments;
-
 }
