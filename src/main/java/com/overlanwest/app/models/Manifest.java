@@ -2,7 +2,7 @@ package com.overlanwest.app.models;
 
 
 import java.time.LocalDateTime;
-
+import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,7 +30,7 @@ public class Manifest {
     private int manifestId;
 
     @Column(name = "date")
-    private LocalDateTime date;
+    private Date date;
 
     @Column(name = "time")
     private LocalDateTime time;
