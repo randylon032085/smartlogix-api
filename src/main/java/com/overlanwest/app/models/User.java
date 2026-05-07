@@ -70,11 +70,11 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Manifest> manifest;
 
-    // @OneToOne(mappedBy = "fromDriver")
-    // private ForceToAssign forceToAssignFrom;
+    @OneToOne(mappedBy = "fromDriver")
+    private ForceToAssign forceToAssignFrom;
 
-    // @OneToOne(mappedBy = "toDriver")
-    // private ForceToAssign forceToAssignTo;
+    @OneToOne(mappedBy = "toDriver")
+    private ForceToAssign forceToAssignTo;
     
 
     
