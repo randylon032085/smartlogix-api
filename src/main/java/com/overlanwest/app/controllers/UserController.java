@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.overlanwest.app.dto.users.response.UserResponse;
+
 import com.overlanwest.app.services.UserService;
 
 @RestController
@@ -19,12 +20,36 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/all")
+  
+
+    @GetMapping("/all-user")
     public ResponseEntity<Page<UserResponse>> getAllUser (Pageable pageable){
 
         return new ResponseEntity<>(userService.getALlUser(pageable), HttpStatus.FOUND);
 
 
     
+    }
+
+
+    @GetMapping("/test")
+    public ResponseEntity<?> sample (){
+
+        return new ResponseEntity<>("Test" , HttpStatus.FOUND);
+    }
+
+
+    @GetMapping("/test2")
+    public ResponseEntity<?> sample2 (){
+
+        return new ResponseEntity<>("Test2" , HttpStatus.FOUND);
+    }
+
+   
+
+    @GetMapping("/test4")
+    public ResponseEntity<?> sample4 (){
+
+        return new ResponseEntity<>("Test4" , HttpStatus.FOUND);
     }
 }

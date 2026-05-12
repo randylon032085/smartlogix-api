@@ -6,4 +6,6 @@ import com.overlanwest.app.models.User;
 
 public interface UserRepositories extends JpaRepository<User, Integer> {
     
+
+    User findByUsername (String username);
 }
