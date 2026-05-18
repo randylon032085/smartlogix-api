@@ -1,0 +1,23 @@
+CREATE TABLE sales (
+    sales_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    customer_id BIGINT,
+    shipper_id BIGINT,
+    item_rate_id BIGINT,
+    user_id BIGINT,
+    accessorial decimal(10, 2),
+    weight decimal(10, 2),
+    rate decimal(10, 2),
+    tarrif decimal(10, 2),
+    shipment_date timestamp,
+    currency varchar(255),
+    pickup_date timestamp,
+    zip_code varchar(20),
+    city_state varchar(255),
+    freight_bill bigint,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (shipper_id) REFERENCES shippers(shipper_id),
+    FOREIGN KEY (item_rate_id) REFERENCES item_rates(item_rate_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+)

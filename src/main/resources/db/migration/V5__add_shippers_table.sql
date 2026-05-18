@@ -1,0 +1,9 @@
+CREATE TABLE shippers (
+    shipper_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    shipper_name VARCHAR(255),
+    shipper_address VARCHAR(255),
+    shipper_contact BIGINT,
+    shipper_email VARCHAR(255) UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
