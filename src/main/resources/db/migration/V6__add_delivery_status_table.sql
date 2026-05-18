@@ -3,7 +3,7 @@ CREATE TABLE delivery_status(
     status VARCHAR(255),
     photo_proof BLOB,
     delivery_date TIMESTAMP,
-    ssignature BLOB,
+    signature BLOB,
     consignee VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
