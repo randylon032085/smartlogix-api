@@ -1,0 +1,21 @@
+CREATE TABLE item_rates (
+    item_rate_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    lnft decimal(10, 2),
+    cuft decimal(10, 2),
+    seats bigint,
+    units bigint,
+    pieces bigint,
+    inv_amt decimal(10, 2),
+    COD_amt decimal(10, 2),
+    dec_value decimal(10, 2),
+    fsc_age decimal(10, 2),
+    rate_age decimal(10, 2),
+    disc_age decimal(10, 2),
+    freight varchar(255),
+    disc varchar(255),
+    fsc varchar(255),
+    pst_gst_hst decimal(10, 2),
+    net_total decimal(10, 2),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
