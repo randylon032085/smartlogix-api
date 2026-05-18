@@ -3,6 +3,9 @@ package com.overlanwest.app.models;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -33,10 +36,12 @@ public class Role {
     private String rolename;
 
 
-    @Column(name = "create_at")
+    @CreationTimestamp
+    @Column(name = "create_at", updatable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "update_at")
+    @UpdateTimestamp
+    @Column(name = "update_at", updatable = false)
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "role", fetch = FetchType.LAZY )
