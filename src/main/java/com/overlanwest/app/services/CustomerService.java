@@ -6,7 +6,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.overlanwest.app.dto.customers.request.CreateCustomerRequest;
 import com.overlanwest.app.dto.customers.response.CustomerResponse;
+import com.overlanwest.app.models.Customer;
 import com.overlanwest.app.repositories.CustomerRepositories;
 import com.overlanwest.app.util.CustomerMapstruct;
 
@@ -27,6 +29,16 @@ public class CustomerService {
     
         return customRepo.findAll(pageable).map(customMaps::toDto);
 
+    }
+
+    @Transactional
+    public CustomerResponse createNewCustomer (CreateCustomerRequest createCustomerRequest) {
+
+        Customer newCustomer = customMaps.toEntity(createCustomerRequest);
+        
+        Customer saveCustomer = customRepo.save(newCustomer);
+
+        return customMaps.toDto(saveCustomer);
     }
     
 }

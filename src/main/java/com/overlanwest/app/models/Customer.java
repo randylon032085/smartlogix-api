@@ -3,6 +3,9 @@ package com.overlanwest.app.models;
 import java.sql.Date;
 import java.util.List;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -41,10 +44,12 @@ public class Customer {
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    @Column(name = "created_at")
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false)
     private Date createdAt;
 
-    @Column(name = "updated_at")
+    @UpdateTimestamp
+    @Column(name = "updated_at", updatable = false)
     private Date updatedAt;
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)

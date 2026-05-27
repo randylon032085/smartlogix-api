@@ -2,6 +2,7 @@ package com.overlanwest.app.util;
 
 import org.mapstruct.Mapper;
 
+import com.overlanwest.app.dto.customers.request.CreateCustomerRequest;
 import com.overlanwest.app.dto.customers.response.CustomerResponse;
 import com.overlanwest.app.models.Customer;
 
@@ -10,4 +11,7 @@ public interface CustomerMapstruct {
     
 
     CustomerResponse toDto (Customer customer);
+
+
+    Customer toEntity (CreateCustomerRequest createCustomerRequest);
 }
