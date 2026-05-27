@@ -34,7 +34,7 @@ public class RoleSerive {
 
         Role role = roleMapstruct.toEntity(createRoleRequest);
 
-        System.out.print("NEW ROLE2 : " + createRoleRequest);
+        
         Role saveRole = roleRepositories.save(role);
 
         return roleMapstruct.toDto(saveRole);
