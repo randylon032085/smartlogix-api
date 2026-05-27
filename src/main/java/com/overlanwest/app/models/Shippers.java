@@ -3,6 +3,9 @@ package com.overlanwest.app.models;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -38,10 +41,12 @@ public class Shippers {
     @Column(name = "shipper_email")
     private String shipperEmail;
 
-    @Column(name = "created_at")
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
+    @UpdateTimestamp
+    @Column(name = "updated_at", updatable = false)
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "shippers")

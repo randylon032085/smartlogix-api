@@ -2,6 +2,7 @@ package com.overlanwest.app.util;
 
 import org.mapstruct.Mapper;
 
+import com.overlanwest.app.dto.shippers.request.CreateShippersRequest;
 import com.overlanwest.app.dto.shippers.response.ShippersResponse;
 import com.overlanwest.app.models.Shippers;
 
@@ -9,5 +10,7 @@ import com.overlanwest.app.models.Shippers;
 public interface ShipperMapstruct {
 
     ShippersResponse toDto(Shippers shippers);
+
+    Shippers toEntity(CreateShippersRequest createShippersRequest);
     
 }
