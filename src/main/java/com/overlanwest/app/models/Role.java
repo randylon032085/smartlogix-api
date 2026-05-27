@@ -47,6 +47,11 @@ public class Role {
     @OneToMany(mappedBy = "role", fetch = FetchType.LAZY )
     private List<User> user;
 
+    public Role orElseThrow(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'orElseThrow'");
+    }
+
     // @OneToMany(mappedBy = "role")
     // private List<AuditLogs> auditLogs;
 

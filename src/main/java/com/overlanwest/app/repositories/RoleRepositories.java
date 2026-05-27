@@ -6,4 +6,5 @@ import com.overlanwest.app.models.Role;
 
 public interface RoleRepositories extends JpaRepository<Role, Integer> {
     
+    Role findByRolename(String rolename);
 }
