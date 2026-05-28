@@ -3,6 +3,7 @@ package com.overlanwest.app.util;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+import com.overlanwest.app.dto.pod.request.CreatePodRequest;
 import com.overlanwest.app.dto.pod.response.PodResponse;
 import com.overlanwest.app.models.Pod;
 
@@ -27,4 +28,6 @@ public interface PodMapstruct {
     @Mapping(target = "consinee", source = "pod.deliveryStatus.consignee")
     PodResponse toDto (Pod pod);
     
+
+    Pod toEntity (CreatePodRequest createPodRequest);
 }
