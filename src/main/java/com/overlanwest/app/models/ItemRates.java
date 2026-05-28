@@ -2,6 +2,8 @@ package com.overlanwest.app.models;
 
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -62,16 +64,24 @@ public class ItemRates {
     @Column(name = "freight")
     private String freight;
 
+    @Column(name = "disc")
+    private String disc;
+
+    @Column(name = "fsc")
+    private String fsc;
+
     @Column(name = "pst_gst_hst")
     private double pstGstHst;
 
     @Column(name = "net_total")
     private double netTotal;
 
-    @Column(name = "created_at")
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
+    @UpdateTimestamp
+    @Column(name = "updated_at", updatable = false)
     private LocalDateTime updatedAt;
 
     @OneToOne(mappedBy = "itemRates")

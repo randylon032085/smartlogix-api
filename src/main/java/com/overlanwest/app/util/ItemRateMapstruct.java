@@ -2,6 +2,7 @@ package com.overlanwest.app.util;
 
 import org.mapstruct.Mapper;
 
+import com.overlanwest.app.dto.itemRates.request.CreateItemRateRequest;
 import com.overlanwest.app.dto.itemRates.response.ItemRatesResponse;
 import com.overlanwest.app.models.ItemRates;
 
@@ -10,4 +11,6 @@ public interface ItemRateMapstruct {
     
 
     ItemRatesResponse toDto (ItemRates itemRates);
+
+    ItemRates toEntity (CreateItemRateRequest createItemRateRequest);   
 }

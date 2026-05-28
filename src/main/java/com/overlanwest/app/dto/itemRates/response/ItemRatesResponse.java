@@ -21,6 +21,8 @@ public class ItemRatesResponse {
     private double rateAge;
     private double discAge;
     private String freight;
+    private String disc;
+    private String fsc;
     private double pstGstHst;
     private double netTotal;
 

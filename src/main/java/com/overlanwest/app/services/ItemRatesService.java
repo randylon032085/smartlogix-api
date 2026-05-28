@@ -6,7 +6,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.overlanwest.app.dto.itemRates.request.CreateItemRateRequest;
 import com.overlanwest.app.dto.itemRates.response.ItemRatesResponse;
+import com.overlanwest.app.models.ItemRates;
 import com.overlanwest.app.repositories.ItemRateRepositories;
 import com.overlanwest.app.util.ItemRateMapstruct;
 
@@ -26,5 +28,17 @@ public class ItemRatesService {
 
         return itemRateRepo.findAll(pageable).map(itemRateMaps::toDto);
     }
-    
+
+    @Transactional
+    public ItemRatesResponse createItemRate (CreateItemRateRequest createItemRateRequest){
+        
+        ItemRates newItemRate = itemRateMaps.toEntity(createItemRateRequest);
+
+        ItemRates savedItemRate = itemRateRepo.save(newItemRate)
+;
+        return itemRateMaps.toDto(savedItemRate);
+    }
+
+   
+
 }
