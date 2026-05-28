@@ -64,6 +64,12 @@ public class ItemRates {
     @Column(name = "freight")
     private String freight;
 
+    @Column(name = "disc")
+    private String disc;
+
+    @Column(name = "fsc")
+    private String fsc;
+
     @Column(name = "pst_gst_hst")
     private double pstGstHst;
 

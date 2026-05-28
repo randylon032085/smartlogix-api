@@ -49,6 +49,12 @@ public class CreateItemRateRequest {
     @NotBlank(message = "Freight is required")
     private String freight;
 
+    @NotBlank(message = "Disc is required")
+    private String disc;    
+
+    @NotBlank(message = "FSC is required")
+    private String fsc;
+
     @NotNull(message = "PST/GST/HST is required")
     private double pstGstHst;
 
