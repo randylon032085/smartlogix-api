@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.overlanwest.app.dto.role.request.CreateRoleRequest;
 import com.overlanwest.app.dto.role.response.RoleResponse;
 
-import com.overlanwest.app.services.RoleSerive;
+import com.overlanwest.app.services.RoleService;
 
 import jakarta.validation.Valid;
 
@@ -26,18 +26,18 @@ public class RoleController {
     
 
     @Autowired
-    private RoleSerive roleSerive;
+    private RoleService roleService;
 
     @GetMapping("/all")
     public ResponseEntity<Page<RoleResponse>> getAllRole (Pageable pageable){
-        return new ResponseEntity<>(roleSerive.getAllRole(pageable), HttpStatus.FOUND);
+        return new ResponseEntity<>(roleService.getAllRole(pageable), HttpStatus.FOUND);
   
     }   
 
     @PostMapping("/new-role")
     public ResponseEntity<RoleResponse> createNewRole (@Valid @RequestBody CreateRoleRequest createRoleRequest){
 
-        RoleResponse createNewRole = roleSerive.createNewRole(createRoleRequest);
+        RoleResponse createNewRole = roleService.createNewRole(createRoleRequest);
 
         return new ResponseEntity<>(createNewRole, HttpStatus.CREATED);
     }

@@ -15,7 +15,7 @@ import com.overlanwest.app.util.RoleMapstruct;
 
 
 @Service
-public class RoleSerive {
+public class RoleService {
     
     @Autowired
     private RoleRepositories roleRepositories;
